@@ -2,6 +2,10 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 import LoginForm from "../../components/forms/LoginForm";
 import "../../styles/loginStyles.css";
 import loginIllustration from "../../assets/login-screen-image.png";
+import google_icon from "../../assets/google_icon.svg";
+import facebook_icon from "../../assets/facebook_icon.svg";
+import linkedin_icon from "../../assets/linkedin_icon.svg";
+import twitter_icon from "../../assets/twitter_icon.svg";
 
 const Login = () => {
   return (
@@ -16,13 +20,40 @@ const Login = () => {
               </p>
             </div>
             <LoginForm />
-            <div className=" mt-3 d-flex align-items-center justify-content-center">
+            <div className="mb-3 mt-3 d-flex align-items-center justify-content-center">
               <hr className="hr-line" />
               <p className="mb-0 w-100 mx-3">Or Sign In With</p>
               <hr className="hr-line" />
             </div>
-            <div>
-              
+            <div className="d-flex justify-content-around align-items-center">
+              <Image
+                width={48}
+                height={48}
+                src={google_icon}
+                alt="Google Icon"
+                fluid
+              />
+              <Image
+                width={48}
+                height={48}
+                src={facebook_icon}
+                alt="Google Icon"
+                fluid
+              />
+              <Image
+                width={48}
+                height={48}
+                src={linkedin_icon}
+                alt="Google Icon"
+                fluid
+              />
+              <Image
+                width={48}
+                height={48}
+                src={twitter_icon}
+                alt="Google Icon"
+                fluid
+              />
             </div>
           </div>
         </Col>

@@ -1,13 +1,17 @@
 import { useEffect } from "react";
 import Header from "../../components/Header";
 import HomeCarousel from "../../components/HomeCarousel";
-import { useDispatch } from "react-redux";
-import type { AppDispatch } from "../../app/store";
+import { useDispatch, useSelector } from "react-redux";
+import type { AppDispatch, RootState } from "../../app/store";
 import { getCountriesDetails } from "../../features/countriesSlice";
 import CountryCard from "../../components/CountryCard";
+import Loader from "../../components/Loader";
 
 const Home = () => {
   const dispatch = useDispatch<AppDispatch>();
+  const isLoading = useSelector(
+    (state: RootState) => state.countries.isLoading
+  );
 
   useEffect(() => {
     dispatch(getCountriesDetails(""));
@@ -16,13 +20,19 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div className="welcome-box container">
-        <hr className="hr-line" />
-        <h1 className="welcome-text">WELCOME</h1>
-        <hr className="hr-line" />
-      </div>
-      <HomeCarousel />
-      <CountryCard />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <div className="welcome-box container">
+            <hr className="hr-line" />
+            <h1 className="welcome-text">WELCOME</h1>
+            <hr className="hr-line" />
+          </div>
+          <HomeCarousel />
+          <CountryCard />
+        </>
+      )}
     </div>
   );
 };

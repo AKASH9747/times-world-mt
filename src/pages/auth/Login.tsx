@@ -57,7 +57,7 @@ const Login = () => {
             </div>
           </div>
         </Col>
-        <Col xs={12} md={4} className="right-column">
+        <Col xs={12} md={4} className="right-column  d-none d-md-block">
           <div className="image-container">
             <Image
               src={loginIllustration} // Replace with your custom illustration

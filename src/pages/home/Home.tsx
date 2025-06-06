@@ -6,6 +6,7 @@ import type { AppDispatch, RootState } from "../../app/store";
 import { getCountriesDetails } from "../../features/countriesSlice";
 import CountryCard from "../../components/CountryCard";
 import Loader from "../../components/Loader";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -18,7 +19,7 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="p-1">
       <Header />
       {isLoading ? (
         <Loader />
@@ -31,6 +32,7 @@ const Home = () => {
           </div>
           <HomeCarousel />
           <CountryCard />
+          <Footer />
         </>
       )}
     </div>

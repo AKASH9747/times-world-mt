@@ -1,10 +1,10 @@
 import { Button, Form as BootstrapForm } from "react-bootstrap";
-import type { AppDispatch } from "../../app/store";
+import type { AppDispatch } from "../../redux/app/store";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Formik, Field, Form as FormikForm, ErrorMessage } from "formik";
 import { loginValidationSchema } from "../../schemas/loginValidationSchemas";
-import { login } from "../../features/authSlice";
+import { login } from "../../redux/features/authSlice";
 
 interface LoginFormValues {
   email: string;

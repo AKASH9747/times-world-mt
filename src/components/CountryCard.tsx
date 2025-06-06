@@ -1,6 +1,6 @@
 import { Row, Col, Card, Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import type { RootState } from "../app/store";
+import type { RootState } from "../redux/app/store";
 import "../styles/countryCardStyle.css";
 import { useState } from "react";
 

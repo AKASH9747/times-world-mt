@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/auth/Login";
 import Home from "./pages/home/Home";
 import { useSelector } from "react-redux";
-import type { RootState } from "./app/store";
+import type { RootState } from "./redux/app/store";
 import SignUp from "./pages/auth/SignUp";
 
 function App() {

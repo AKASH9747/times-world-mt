@@ -2,9 +2,9 @@ import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { getCountriesDetails } from "../features/countriesSlice";
+import { getCountriesDetails } from "../redux/features/countriesSlice";
 import { useDispatch } from "react-redux";
-import type { AppDispatch } from "../app/store";
+import type { AppDispatch } from "../redux/app/store";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState<string>("");

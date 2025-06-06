@@ -1,6 +1,6 @@
 import { Carousel } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import type { RootState } from "../app/store";
+import type { RootState } from "../redux/app/store";
 
 const HomeCarousel = () => {
   const countries = useSelector(
@@ -13,10 +13,6 @@ const HomeCarousel = () => {
         ? countries.map((country, index) => (
             <Carousel.Item key={index}>
               <img src={country.flag} alt={`Slide ${index}`} />
-              <Carousel.Caption>
-                <h3>First Slide</h3>
-                <p>This is the first slide description.</p>
-              </Carousel.Caption>
             </Carousel.Item>
           ))
         : null}
